@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<Account Balance &le; 2.5<br/>gini = 0.42<br/>samples = 1000<br/>value = [300, 700]<br/>class = good>, fillcolor="#399de592"] ;
+1 [label=<Duration of Credit (month) &le; 22.5<br/>gini = 0.4933<br/>samples = 543<br/>value = [240, 303]<br/>class = good>, fillcolor="#399de535"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<Payment Status of Previous Credit &le; 1.5<br/>gini = 0.4528<br/>samples = 306<br/>value = [106, 200]<br/>class = good>, fillcolor="#399de578"] ;
+1 -> 2 ;
+3 [label=<gini = 0.375<br/>samples = 28<br/>value = [21, 7]<br/>class = bad>, fillcolor="#e58139aa"] ;
+2 -> 3 ;
+4 [label=<gini = 0.4245<br/>samples = 278<br/>value = [85, 193]<br/>class = good>, fillcolor="#399de58f"] ;
+2 -> 4 ;
+5 [label=<Value Savings/Stocks &le; 3.5<br/>gini = 0.4914<br/>samples = 237<br/>value = [134, 103]<br/>class = bad>, fillcolor="#e581393b"] ;
+1 -> 5 ;
+6 [label=<gini = 0.47<br/>samples = 196<br/>value = [122, 74]<br/>class = bad>, fillcolor="#e5813964"] ;
+5 -> 6 ;
+7 [label=<gini = 0.414<br/>samples = 41<br/>value = [12, 29]<br/>class = good>, fillcolor="#399de595"] ;
+5 -> 7 ;
+8 [label=<Length of current employment &le; 3.5<br/>gini = 0.2281<br/>samples = 457<br/>value = [60, 397]<br/>class = good>, fillcolor="#399de5d8"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label=<Credit Amount &le; 4158.0<br/>gini = 0.2966<br/>samples = 243<br/>value = [44, 199]<br/>class = good>, fillcolor="#399de5c7"] ;
+8 -> 9 ;
+10 [label=<gini = 0.2235<br/>samples = 195<br/>value = [25, 170]<br/>class = good>, fillcolor="#399de5da"] ;
+9 -> 10 ;
+11 [label=<gini = 0.4783<br/>samples = 48<br/>value = [19, 29]<br/>class = good>, fillcolor="#399de558"] ;
+9 -> 11 ;
+12 [label=<No of dependents &le; 1.5<br/>gini = 0.1384<br/>samples = 214<br/>value = [16, 198]<br/>class = good>, fillcolor="#399de5ea"] ;
+8 -> 12 ;
+13 [label=<gini = 0.0887<br/>samples = 172<br/>value = [8, 164]<br/>class = good>, fillcolor="#399de5f3"] ;
+12 -> 13 ;
+14 [label=<gini = 0.3084<br/>samples = 42<br/>value = [8, 34]<br/>class = good>, fillcolor="#399de5c3"] ;
+12 -> 14 ;
+}
